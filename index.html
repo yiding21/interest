@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>盆景记</title>
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<header class="site-head wrap">
+  <h1>盆景记</h1>
+  <p class="sub">一株一器，一枝一叶，都记下来。</p>
+</header>
+
+<main class="wrap">
+  <p class="intro">这里记录我做的盆景。点开每一株，能看到它的原样、成品、背部和制作过程，以及怎么养。</p>
+
+  <a class="card" href="jiulixiang.html">
+    <div class="photo" style="border-radius:0">
+      <img src="assets/images/jiulixiang/cover.png" alt="九里香">
+      <span class="ph-label">封面照片<br>assets/images/jiulixiang/cover.png</span>
+    </div>
+    <div class="card-body">
+      <h2>九里香</h2>
+      <p class="latin">Murraya paniculata</p>
+      <p class="desc">芸香科九里香属，花香远播、叶小枝密，岭南盆景最经典的树种之一。耐修剪、成型快，从原样到成景的全过程都在这里。</p>
+      <span class="more">查看详情 →</span>
+    </div>
+  </a>
+
+  <div class="add">
+    <h3>下一株？</h3>
+    <p>把照片放进 <code>assets/images/</code> 里的新文件夹，再复制一份 <code>jiulixiang.html</code> 改改文字，然后在首页照样子加一张卡片就行。</p>
+  </div>
+</main>
+
+<footer class="wrap">盆景记 · 阿辉的个人盆景档案</footer>
+
+<script>
+/* 照片缺失时显示占位说明 */
+document.querySelectorAll("img").forEach(function (im) {
+  im.addEventListener("error", function () {
+    var p = im.closest(".photo");
+    if (p) p.classList.add("miss");
+  });
+});
+</script>
+</body>
+</html>
